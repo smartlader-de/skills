@@ -1,9 +1,9 @@
 ---
-name: one-password-mcp-secrets
+name: 1password-environment-manager
 description: Use when managing project environment variables, provider secrets, or local runtime secrets through 1Password Environments, 1Password MCP, or guarded op CLI workflows
 ---
 
-# one-password-mcp-secrets
+# 1password-environment-manager
 
 Manage project environment variables through 1Password Environments. MCP-first. Values never reach the agent by default.
 
@@ -16,6 +16,7 @@ Use this skill when a user asks to:
 - Push secrets from 1Password to Netlify or Cloudflare.
 - Set up local development so secrets come from 1Password at runtime.
 - Understand or configure the 1Password MCP server for secret management.
+- Generate new credentials during infrastructure or service setup.
 
 Do not use this skill for general password-manager operations or secret rotation. Rotation is deferred.
 
