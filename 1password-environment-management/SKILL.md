@@ -42,6 +42,7 @@ Check in this order:
 1. Are 1Password MCP tools available in this agent session?
 2. Does the local MCP binary exist, such as `/Applications/1Password.app/Contents/MacOS/onepassword-mcp` on macOS?
 3. Is Codex configured to launch that MCP server?
+4. If MCP tools are not in this session, load `references/mcp-quickstart.md` for registration and bootstrap instructions before proceeding.
 
 If MCP is missing, offer setup. Do not proceed to CLI fallback until setup is declined or unavailable.
 
