@@ -51,6 +51,7 @@ Load `references/mcp-setup.md` for setup details.
 ## Access Path Priority
 
 1. 1Password MCP for Environment management and metadata-only workflows.
+   > Note: In Codex sessions, MCP tools require a `config.toml` entry and session restart. See `references/mcp-quickstart.md`.
 2. `op run --environment` for subprocess runtime injection when supported.
 3. `op environment read` only as guarded raw-value fallback.
 4. `op run --env-file` with `op://` references for classic compatibility.
