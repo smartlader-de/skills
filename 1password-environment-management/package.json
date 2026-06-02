@@ -1,0 +1,11 @@
+{
+  "name": "one-password-mcp-secrets",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/parse-dotenv.test.js tests/compare-env-names.test.js && bash tests/redact-output.test.sh"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
