@@ -115,6 +115,23 @@ For local development:
 
 Always ensure generated or mounted dotenv paths are in `.gitignore`. Do not update project scripts without user confirmation.
 
+## Infrastructure Secret Creation Workflow
+
+When generating new secrets during infrastructure setup (database passwords, API
+tokens, auth secrets, service join tokens):
+
+1. Create or identify the target Environment via MCP.
+2. Generate each secret value using a local tool (`openssl rand`, etc.) and pipe
+   directly to MCP `append_variables` with `concealed: true` — do not print the value.
+3. Use `op run --environment ENV_ID -- <command>` to inject values from 1Password
+   into the target system (Docker service, cloud provider, etc.).
+4. Never create secrets in the target system first and copy to 1Password second.
+   If that already happened: generate a new value in 1Password, update the target
+   system, discard the original value.
+
+Load `references/mcp-quickstart.md` for the `append_variables` call pattern and
+MCP auth flow.
+
 ## CLI Fallback
 
 If MCP is unavailable and the user declines setup, say:
