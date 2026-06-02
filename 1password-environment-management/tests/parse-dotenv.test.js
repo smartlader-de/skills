@@ -25,6 +25,12 @@ test('ignores blank lines and counts blanks', () => {
   assert.equal(result.blankCount, 3);
 });
 
+test('counts multiple trailing blank lines without counting split artifact', () => {
+  const result = parseDotenv('KEY=value\n\n\n');
+  assert.deepEqual(result.names, ['KEY']);
+  assert.equal(result.blankCount, 2);
+});
+
 test('handles double-quoted values', () => {
   const result = parseDotenv('MY_VAR="hello world"');
   assert.deepEqual(result.names, ['MY_VAR']);

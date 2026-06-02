@@ -11,32 +11,20 @@ function parseDotenv(content) {
   let blankCount = 0;
 
   const lines = content.split(/\r?\n/);
-  let lastNonBlankIndex = -1;
-
-  for (let index = lines.length - 1; index >= 0; index -= 1) {
-    if (lines[index].trim() !== '') {
-      lastNonBlankIndex = index;
-      break;
-    }
+  let trailingEmptyCount = 0;
+  while (lines.length > 0 && lines[lines.length - 1] === '') {
+    trailingEmptyCount++;
+    lines.pop();
   }
-
-  let trailingBlankCounted = false;
 
   for (let index = 0; index < lines.length; index += 1) {
     const rawLine = lines[index];
     const line = rawLine.trim();
 
     if (line === '') {
-      if (index <= lastNonBlankIndex) {
-        blankCount++;
-      } else if (!trailingBlankCounted) {
-        blankCount++;
-        trailingBlankCounted = true;
-      }
+      blankCount++;
       continue;
     }
-
-    trailingBlankCounted = false;
 
     if (line.startsWith('#')) {
       commentCount++;
@@ -57,6 +45,12 @@ function parseDotenv(content) {
     }
 
     names.push(name);
+  }
+
+  if (trailingEmptyCount > 1) {
+    blankCount += trailingEmptyCount - 1;
+  } else if (trailingEmptyCount === 1 && blankCount > 0) {
+    blankCount++;
   }
 
   return {
