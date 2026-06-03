@@ -1,5 +1,5 @@
 {
-  "name": "1password-environment-manager",
+  "name": "1password",
   "version": "2.0.0",
   "private": true,
   "description": "1Password environments and SSH/Git skills for Claude Code, Codex, and Gemini CLI",

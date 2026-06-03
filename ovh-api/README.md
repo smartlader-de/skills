@@ -20,14 +20,14 @@ Safety-first design: read-only mode default, triple confirmation for destructive
 ## Installation
 
 ```bash
-npx skills add smartlader-de/public-skills --skill ovh-api
+npx skills add smartlader-de/skills --skill ovh-api
 ```
 
 Or install manually:
 
 ```bash
 # Clone or download this repo, then:
-cp -r public-skills/ovh-api ~/.claude/skills/ovh-api
+cp -r skills/ovh-api ~/.claude/skills/ovh-api
 ```
 
 Or if installing directly:

@@ -3,5 +3,5 @@
 .clavix/
 .worktrees/
 .gstack/
-1password-environment-management/docs/
-1password-environment-management/.1password/
+1password/docs/
+1password/.1password/

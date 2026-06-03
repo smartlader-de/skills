@@ -1,8 +1,8 @@
-# PRD: 1Password Environment Manager Skill
+# PRD: 1Password Skills Collection
 
 ## Working Name
 
-`1password-environment-manager`
+`1password`
 
 ## Purpose
 
@@ -321,7 +321,7 @@ The feature surface is new enough that the Skill should not rely only on remembe
 ## Recommended Skill Structure
 
 ```text
-1password-environment-manager/
+1password/
 ├── SKILL.md
 ├── references/
 │   ├── one-password-environments.md
@@ -373,7 +373,7 @@ Every task should follow this sequence:
 ## Example Skill Trigger Description
 
 ```yaml
-name: 1password-environment-manager
+name: 1password
 description: >
   Use when managing project passwords, API keys, environment variables, or provider
   secrets through 1Password MCP, 1Password Environments, or op CLI. Supports importing

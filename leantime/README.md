@@ -22,13 +22,13 @@ via the JSON-RPC 2.0 API. Single API key auth — no OAuth, no HMAC.
 ## Installation
 
 ```bash
-npx skills add smartlader-de/public-skills --skill leantime
+npx skills add smartlader-de/skills --skill leantime
 ```
 
 Or install manually:
 
 ```bash
-cp -r public-skills/leantime ~/.claude/skills/leantime
+cp -r skills/leantime ~/.claude/skills/leantime
 ```
 
 Or if installing directly from this repository:
