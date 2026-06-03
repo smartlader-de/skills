@@ -11,7 +11,13 @@ This collection contains two nested skills:
 
 ## Install
 
-From the public skills repository:
+From the dedicated 1Password skill repository:
+
+```bash
+npx skills add smartlader-de/1password-skill
+```
+
+From the full skills collection:
 
 ```bash
 npx skills add smartlader-de/skills --skill 1password
@@ -65,17 +71,16 @@ returning secret values to the agent.
 ## Included Files
 
 ```text
-1password/
-├── SKILL.md
-├── CLAUDE.md
-├── AGENTS.md
-├── GEMINI.md
-├── skills/
-│   ├── environments/SKILL.md
-│   └── ssh-git/SKILL.md
-├── references/
-├── scripts/
-└── tests/
+SKILL.md
+CLAUDE.md
+AGENTS.md
+GEMINI.md
+skills/
+├── environments/SKILL.md
+└── ssh-git/SKILL.md
+references/
+scripts/
+tests/
 ```
 
 ## Test

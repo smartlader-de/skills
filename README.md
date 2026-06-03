@@ -15,7 +15,7 @@ A collection of reusable Claude agent skills. Each skill extends Claude with dom
 Install a single skill:
 
 ```bash
-npx skills add smartlader-de/skills --skill 1password
+npx skills add smartlader-de/1password-skill
 ```
 
 For example, to install another skill:
