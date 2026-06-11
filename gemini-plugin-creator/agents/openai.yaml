@@ -1,0 +1,4 @@
+interface:
+  display_name: "Gemini Plugin Creator"
+  short_description: "Create, audit, and improve plugins for Gemini CLI compatibility."
+  default_prompt: "Create, audit, or improve this plugin so it works well with Gemini CLI while preserving non-Gemini surfaces."

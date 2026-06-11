@@ -1,7 +1,36 @@
+# OS/editor artifacts
 .DS_Store
-.gitignore
+Thumbs.db
+.idea/
+.vscode/
+
+# Local agent/tool state
 .clavix/
 .worktrees/
 .gstack/
+.remember/
+.claude/settings.local.json
+
+# Local secrets and runtime state
+.env
+.env.*
+!.env.example
+!.env.sample
+*.local
+.cache/
+.tmp/
+tmp/
+
+# Dependency and language caches
+node_modules/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Project-specific private material
 1password/docs/
 1password/.1password/
